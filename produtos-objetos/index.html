@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Produtos: objetos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <main class="container">
+
+        <section class="border rounded-2 p-4 my-3 bg-danger text-light">
+            <h2 class="my-2">Digite o que procura</h2>
+            <form id="busca" name="busca" method="get" action="" class="mb-1">
+                <div class="d-flex">
+                    <input type="search" id="txtBusca" name="txtBusca" class="form-control py-2 me-3"
+                        placeholder="Digite o nome do produto..." required>
+                    <button type="submit" class="btn btn-outline-light btn-lg">Procurar</button>
+                </div>
+            </form>
+            <div id="buscasRealizadas" class="text-light mb-4"></div>
+            <hr>
+            <h2 class="mb-3">Opções Rápidas</h2>
+            <div class="d-flex flex-wrap justify-content-center justify-content-sm-start gap-3 mb-4">
+                <button class="btn btn-outline-light filtro" data-filtro="celular">
+                    Celulares
+                </button>
+                <button class="btn btn-outline-light filtro" data-filtro="televisao">
+                    Televisões
+                </button>
+                <button class="btn btn-outline-light filtro" data-filtro="notebook">
+                    Notebook
+                </button>
+                <button class="btn btn-outline-light filtro" data-filtro="perifericos">
+                    Periféricos
+                </button>
+                <button class="btn btn-outline-light filtro" data-filtro="audio">
+                    Áudio
+                </button>
+                <button class="btn btn-outline-light filtro" data-filtro="games">
+                    Games
+                </button>
+                <button class="btn btn-outline-light filtro" data-filtro="todos">
+                    Mostrar Todos
+                </button>
+            </div>
+        </section>
+        
+        <h2 class="display-2 my-4">Produtos</h2>
+        <section class="row my-4" id="gridCards"></section>
+
+
+        <section class="border rounded-1 p-3 my-3 bg-danger text-light">
+            <h3>Total de produtos encontrados:
+                <span id="totalProdutos"></span>
+            </h3>
+        </section>
+    </main>
+
+
+    <script type="module" src="./js/montarFront.js"></script>
+
+  </body>
+</html>
